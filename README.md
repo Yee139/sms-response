@@ -1,4 +1,4 @@
 Commands:
 
-mvn -U -X package docker:build -Dpush.image=false
-docker-compose -f docker-compose.yml up
+mvn clean install
+java -jar sms-response-0.0.1-SNAPSHOT.jar
