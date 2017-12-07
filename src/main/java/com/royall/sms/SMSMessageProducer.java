@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.royall.sms.dto.SMSReplyDTO;
-import com.royall.sms.dto.SMSStatusDTO;
+import com.royall.sms.model.SMSReplyModel;
+import com.royall.sms.model.SMSStatusModel;
 
 @Component
-public class Producer {
+public class SMSMessageProducer {
 
 	@Autowired
 	private JmsMessagingTemplate jmsMessagingTemplate;
@@ -25,7 +25,7 @@ public class Producer {
 	@Autowired
 	private Queue statusQueue;
 
-	public void sendReply(SMSReplyDTO msg) {
+	public void sendReply(SMSReplyModel msg) {
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String, Object> map = 
 			    mapper.convertValue(msg, new TypeReference<Map<String, String>>() {});
@@ -33,7 +33,7 @@ public class Producer {
 		this.jmsMessagingTemplate.convertAndSend(this.replyQueue, map);
 	}
 	
-	public void sendStatus(SMSStatusDTO msg) {
+	public void sendStatus(SMSStatusModel msg) {
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String, Object> map = 
 			    mapper.convertValue(msg, new TypeReference<Map<String, String>>() {});
