@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
-Implementation-Title: sms-response
+Implementation-Title: sms-response-example
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: FeigenbC
 Implementation-Vendor-Id: com.royall.sms
 Build-Jdk: 1.8.0_144
 Implementation-URL: http://projects.spring.io/spring-boot/sms-response
- /
+ -example/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 Main-Class: com.royall.sms.Application

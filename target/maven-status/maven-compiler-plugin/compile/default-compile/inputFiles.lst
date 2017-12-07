@@ -1,6 +1,8 @@
-C:\workspaces\sms-response\src\main\java\com\royall\sms\dto\SMSReplyDTO.java
-C:\workspaces\sms-response\src\main\java\com\royall\sms\dto\SMSStatusDTO.java
-C:\workspaces\sms-response\src\main\java\com\royall\sms\SMSResponseController.java
-C:\workspaces\sms-response\src\main\java\com\royall\sms\Producer.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\model\SMSStatusModel.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\controller\SMSResponseController.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\repository\SMSReplyRepository.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\model\SMSReplyModel.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\SMSMessageProducer.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\SMSMessageConsumer.java
+C:\workspaces\sms-response\src\main\java\com\royall\sms\repository\SMSStatusRepository.java
 C:\workspaces\sms-response\src\main\java\com\royall\sms\Application.java
-C:\workspaces\sms-response\src\main\java\com\royall\sms\Listener.java
