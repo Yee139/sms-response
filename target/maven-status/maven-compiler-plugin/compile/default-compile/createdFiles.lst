@@ -1,10 +1,12 @@
 com\royall\sms\model\SMSReplyModel.class
-com\royall\sms\SMSMessageProducer$2.class
 com\royall\sms\repository\SMSReplyRepository.class
 com\royall\sms\controller\SMSResponseController.class
 com\royall\sms\SMSMessageConsumer.class
 com\royall\sms\SMSMessageProducer$1.class
 com\royall\sms\model\SMSStatusModel.class
 com\royall\sms\repository\SMSStatusRepository.class
-com\royall\sms\SMSMessageProducer.class
 com\royall\sms\Application.class
+com\royall\sms\SMSMessageProducer$2.class
+com\royall\sms\LoadTest$1.class
+com\royall\sms\SMSMessageProducer.class
+com\royall\sms\LoadTest.class

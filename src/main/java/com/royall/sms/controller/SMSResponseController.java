@@ -2,6 +2,7 @@ package com.royall.sms.controller;
 
 import javax.jms.JMSException;
 import javax.jms.Queue;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.apache.activemq.command.ActiveMQQueue;
@@ -46,6 +47,11 @@ public class SMSResponseController {
     ResponseEntity<String> status(@Valid SMSStatusModel statusDTO) throws InterruptedException, JMSException {
         this.producer.sendStatus(statusDTO);
         return ResponseEntity.status(HttpStatus.OK).body("");
+    }
+    
+    @RequestMapping(value="/health", method = RequestMethod.GET)
+    ResponseEntity<String> status(HttpServletRequest request) {
+        return ResponseEntity.status(HttpStatus.OK).body("Server Name: " + request.getLocalName());
     }
 
 }
