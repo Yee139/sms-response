@@ -37,18 +37,33 @@ public class SMSResponseController {
             return new ActiveMQQueue("sms.status");
     }
 	
+	/**
+	 * 
+	 */
 	@RequestMapping(value="/reply", method = RequestMethod.POST)
 	ResponseEntity<String> reply(@Valid SMSReplyModel replyDTO) throws InterruptedException, JMSException {
 		this.producer.sendReply(replyDTO);
 		return ResponseEntity.status(HttpStatus.OK).body("");
 	}
  
+	/**
+	 * 
+	 * @param statusDTO
+	 * @return
+	 * @throws InterruptedException
+	 * @throws JMSException
+	 */
     @RequestMapping(value="/status", method = RequestMethod.POST)
     ResponseEntity<String> status(@Valid SMSStatusModel statusDTO) throws InterruptedException, JMSException {
         this.producer.sendStatus(statusDTO);
         return ResponseEntity.status(HttpStatus.OK).body("");
     }
     
+    /**
+     * 
+     * @param request
+     * @return
+     */
     @RequestMapping(value="/health", method = RequestMethod.GET)
     ResponseEntity<String> status(HttpServletRequest request) {
         return ResponseEntity.status(HttpStatus.OK).body("Server Name: " + request.getLocalName());
